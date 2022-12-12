@@ -3,8 +3,8 @@ pytest -v --tb=line --language=en test_main_page.py
 """
 
 import pytest
-from .pages.main_page import MainPage
-from .pages.login_page import LoginPage
+from pages.main_page import MainPage
+from pages.login_page import LoginPage
 
 @pytest.mark.skip
 def test_guest_can_go_to_login_page(browser):
