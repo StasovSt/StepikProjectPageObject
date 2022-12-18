@@ -12,8 +12,29 @@ class ProductPage(BasePage):
         basket_button.click()
 
     def go_to_the_basket(self):
+        """Перейти в корзину"""
         basket = self.browser.find_element(*ProductPageLocators.BASKET_BUTTON)
         basket.click()
+
+    def product_in_basket_check(self):
+        """Проверка всплывашки, что товар добавлен в корзину"""
+        product_in_main_page = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME) #Наименование продукта в основной странице
+        product_in_main_page_text = product_in_main_page.text
+
+        product_in_inform_alert_window = self.browser.find_element(*ProductPageLocators.PRODUCT_ADD_TO_THE_BASKET) #Наименование продукта в всплывающем окне
+        product_in_inform_alert_window_text = product_in_inform_alert_window.text
+
+        assert product_in_main_page_text == product_in_inform_alert_window_text, "Какой то левый товар был добавлен в корзину"
+
+    def check_value_price_basket(self):
+        """Проверка всплывашки"""
+        product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE)
+        product_price_text = product_price.text
+
+        basket_price = self.browser.find_element(*ProductPageLocators.PRICE_IN_THE_BASKET)
+        basket_price_text = basket_price.text
+
+        assert product_price_text == basket_price_text, "Стоимость товара не равна общей стоимости корзины"
 
 
     def solve_quiz_and_get_code(self):
