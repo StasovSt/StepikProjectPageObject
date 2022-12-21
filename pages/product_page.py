@@ -1,3 +1,5 @@
+import time
+
 from .base_page import BasePage
 from .locators import ProductPageLocators
 from selenium.common.exceptions import NoAlertPresentException
@@ -47,6 +49,7 @@ class ProductPage(BasePage):
         try:
             alert = self.browser.switch_to.alert
             alert_text = alert.text
+            # time.sleep(10)
             print(f"Your code: {alert_text}")
             alert.accept()
         except NoAlertPresentException:
