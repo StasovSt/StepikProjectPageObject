@@ -56,4 +56,12 @@ class ProductPage(BasePage):
             print("No second alert presented")
 
 
+    def should_not_be_success_message_not_present(self):
+        assert self.is_element_not_present(*ProductPageLocators.PRODUCT_ADD_TO_THE_BASKET), \
+            "Сообщение об успешности есть, а не должно было..."
+
+
+    def should_not_be_success_message_is_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_ADD_TO_THE_BASKET), \
+            "Сообщение об успешности до сих пор есть, а не должно было..."
 
