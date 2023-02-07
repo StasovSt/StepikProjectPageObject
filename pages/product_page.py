@@ -1,5 +1,3 @@
-import time
-
 from .base_page import BasePage
 from .locators import ProductPageLocators
 from selenium.common.exceptions import NoAlertPresentException
@@ -13,10 +11,6 @@ class ProductPage(BasePage):
         basket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_THE_BASKET)
         basket_button.click()
 
-    def go_to_the_basket(self):
-        """Перейти в корзину"""
-        basket = self.browser.find_element(*ProductPageLocators.BASKET_BUTTON)
-        basket.click()
 
     def product_in_basket_check(self):
         """Проверка всплывашки, что товар добавлен в корзину"""
