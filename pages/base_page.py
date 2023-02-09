@@ -22,13 +22,18 @@ class BasePage():
         login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         login_link.click()
 
-    def is_element_present(self, how, what):
+
+    def base_find_element(self, method, cssSelector):
         """Проверяет элемент на его наличие в DOM"""
         try:
-            self.browser.find_element(how, what)
+            self.browser.find_element(method, cssSelector)
         except NoSuchElementException:
             return False
         return True
+
+    def base_send_keys(self, element, value):
+        element.send_keys(value)
+
 
     def is_element_not_present(self, method, cssSelector, timeout=4):
         """

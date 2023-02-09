@@ -16,6 +16,10 @@ class MainPageLocators():
 class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+    REGISTRTION_EMAIL = (By.CSS_SELECTOR, "#id_registration-email")  # Поле для ввода email в поле регистрации
+    REGISTRTION_PASS1 = (By.CSS_SELECTOR, "##id_registration-password1")  # Поле для ввода password в поле регистрации
+    REGISTRTION_PASS2 = (By.CSS_SELECTOR, "##id_registration-password2")  # Поле для ввода password повторно в поле регистрации
+    ADD_TO_REGISTER = (By.CSS_SELECTOR, '[value="Register"]')  # Кнопка "Зарегистрироваться"
 
 class ProductPageLocators():
     PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1") #наименование продукта в главной странице
