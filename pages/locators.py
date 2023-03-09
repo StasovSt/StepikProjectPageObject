@@ -29,5 +29,3 @@ class ProductPageLocators():
     PRODUCT_ADD_TO_THE_BASKET = (By.CSS_SELECTOR, ".alertinner strong") #Название продукта в уведомляемом окне о добавлении в корзину
     PRICE_IN_THE_BASKET = (By.CSS_SELECTOR, ".alertinner p strong")  # цена продукта в уведомляемом окне о добавлении в корзину
     ADD_TO_THE_BASKET = (By.CSS_SELECTOR, ".btn-add-to-basket") #Добавить в корзину
-
-
