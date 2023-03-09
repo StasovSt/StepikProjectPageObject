@@ -6,7 +6,7 @@ class BasketPage(BasePage):
 
     def basket_is_empty_message(self):
         """Проверка на наличие сообщения о пустой корзине"""
-        assert self.is_element_present(*BasketPageLocators.BUTTON_IS_EMPTY), "Нет сообщения что корзина пуста"
+        assert self.base_find_element(*BasketPageLocators.BUTTON_IS_EMPTY), "Нет сообщения что корзина пуста"
 
 
     def basket_is_empty_not_products(self):

@@ -67,10 +67,13 @@ class BasePage():
 
     def should_be_login_link(self):
         """Проверка на наличие кнопки  \"Войти или авторизоваться\""""
-        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+        assert self.base_find_element(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
 
-
+    def should_be_authorized_user(self):
+        icon_user = self.base_find_element(*BasePageLocators.USER_ICON)
+        self.browser.implicitly_wait(15)
+        assert icon_user, "User icon is not presented, probably unauthorised user"
 
 
 

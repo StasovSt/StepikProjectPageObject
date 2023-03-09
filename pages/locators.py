@@ -4,6 +4,8 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link") #Кнопка регистрации или авторизации
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_ink")
     BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-group a.btn.btn-default ")  # Кнопка Посмотреть в Корзину
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+
 
 class BasketPageLocators():
     BUTTON_IS_EMPTY = (By.XPATH, '//p[contains(text(), "Your")]') #Text Корзина пуста (англ)
@@ -16,9 +18,9 @@ class MainPageLocators():
 class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
-    REGISTRTION_EMAIL = (By.CSS_SELECTOR, "#id_registration-email")  # Поле для ввода email в поле регистрации
-    REGISTRTION_PASS1 = (By.CSS_SELECTOR, "##id_registration-password1")  # Поле для ввода password в поле регистрации
-    REGISTRTION_PASS2 = (By.CSS_SELECTOR, "##id_registration-password2")  # Поле для ввода password повторно в поле регистрации
+    REGISTRATION_EMAIL = (By.CSS_SELECTOR, ".form-group #id_registration-email ")  # Поле для ввода email в поле регистрации
+    REGISTRATION_PASS1 = (By.CSS_SELECTOR, "#id_registration-password1")  # Поле для ввода password в поле регистрации
+    REGISTRATION_PASS2 = (By.CSS_SELECTOR, "#id_registration-password2")  # Поле для ввода password повторно в поле регистрации
     ADD_TO_REGISTER = (By.CSS_SELECTOR, '[value="Register"]')  # Кнопка "Зарегистрироваться"
 
 class ProductPageLocators():
