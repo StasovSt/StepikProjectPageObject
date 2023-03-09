@@ -44,7 +44,6 @@ class TestUserAddToBasketFromProductPage():
     def test_user_can_add_product_to_basket(self, browser):
         """Проверка добавления товара в корзину
         Пользователь видит сообщение об успешном добавлении"""
-        # link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{endpoint}"
         link = "http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/"
         page = BasePage(browser, link)
         page.open()

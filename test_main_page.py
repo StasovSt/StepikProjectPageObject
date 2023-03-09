@@ -59,5 +59,3 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
 
     page.basket_is_empty_not_products()
     page.basket_is_empty_message()
-
-
