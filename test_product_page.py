@@ -124,4 +124,3 @@ def test_guest_can_add_product_to_basket(browser, endpoint):
 
     # Проверка что стоимость корзины равна стоимости товара
     page_basket.check_value_price_basket()
-

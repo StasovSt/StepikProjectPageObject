@@ -74,11 +74,3 @@ class BasePage():
         icon_user = self.base_find_element(*BasePageLocators.USER_ICON)
         self.browser.implicitly_wait(15)
         assert icon_user, "User icon is not presented, probably unauthorised user"
-
-
-
-
-
-
-
-
